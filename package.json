@@ -1,0 +1,35 @@
+{
+  "name": "@damisparks/eslint-config",
+  "type": "module",
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.12.1",
+  "description": "Dami Sparks ESLint Config",
+  "author": {
+    "name": "Dami Sparks",
+    "email": "rethinkwithdami@gmail.com",
+    "url": "https://damisparks.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/damisparks/eslint-config#readme",
+  "repository": "github:damisparks/eslint-config",
+  "bugs": "https://github.com/damisparks/eslint-config/issues",
+  "keywords": [
+    "eslint-config",
+    "eslintconfig"
+  ],
+  "main": "index.mjs",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "dev": "config-inspector"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^3.7.3",
+    "eslint-plugin-tailwindcss": "^3.17.4"
+  },
+  "devDependencies": {
+    "@eslint/config-inspector": "^0.5.4",
+    "eslint": "^9.12.0",
+    "eslint-plugin-format": "^0.1.2"
+  }
+}
