@@ -41,14 +41,14 @@ import damisparks from '@damisparks/eslint-config'
 export default damisparks()
 ```
 
-### Basic Usage
+### Usage
 
 Using the default configuration without any arguments activates the `@antfu/eslint-config` preset.
 
 - Autodetects [Vue](https://vuejs.org) and [TypeScript](https://www.typescriptlang.org).
 - Enables ESLint Stylistic style rules.
 
-### Additional Presets
+### Optional Presets
 
 Optionally, these extra options allow you to use the **Vue** and **TailwindCSS** presets:
 
@@ -124,7 +124,7 @@ In VS Code, to enable support for ESLint Flat configuration, edit your `.vscode/
 ```json
 {
   // Required in vscode-eslint < v3.0.10 only
-  "eslint.experimental.useFlatConfig": true
+  "eslint.useFlatConfig": true
 }
 ```
 
