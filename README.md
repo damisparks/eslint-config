@@ -50,7 +50,7 @@ Using the default configuration without any arguments activates the `@antfu/esli
 
 ### Optional Presets
 
-Optionally, these extra options allow you to use the **Vue** and **TailwindCSS** presets:
+Optionally, This config also provides some optional rules or presets for **Vue** and **TailwindCSS** presets:
 
 ```js
 // eslint.config.mjs
