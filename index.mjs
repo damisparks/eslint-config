@@ -1,6 +1,6 @@
 import antfu from '@antfu/eslint-config'
 import antfuOptions from './rules/antfuConfig.mjs'
-import dsConfigBase from './rules/damiConfigBase.mjs'
+import dsConfigBase from './rules/dsConfigBase.mjs'
 import dsConfigTailwind from './rules/dsConfigTailwind.mjs'
 import dsConfigVue from './rules/dsConfigVue.mjs'
 
