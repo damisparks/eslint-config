@@ -1,4 +1,6 @@
-# Changelog
+# @damisparks/eslint-config changelog
+
+## Next
 
 ## 1.0.1 (2024-10-19)
 
