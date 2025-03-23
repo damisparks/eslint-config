@@ -130,5 +130,4 @@ In VS Code, to enable support for ESLint Flat configuration, edit your `.vscode/
 
 ## License
 
-[MIT](/LICENSE) License © 2024-present [Dami Sparks](https://www.damisparks.com)
-```
+[MIT](/LICENSE) License © 2024-present [Dami Sparks](https://github.com/damisparks)
