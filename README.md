@@ -66,6 +66,24 @@ export default damisparks(
 )
 ```
 
+#### Tailwind CSS Support
+
+To use the Tailwind CSS preset, you need to install the `eslint-plugin-tailwindcss` package:
+
+```bash
+pnpm add -D eslint-plugin-tailwindcss
+```
+
+This is an optional dependency to avoid compatibility issues with different versions. If you experience issues with eslint-plugin-tailwindcss v4, you can specify v3 in your package.json:
+
+```json
+{
+  "devDependencies": {
+    "eslint-plugin-tailwindcss": "^3.18.0"
+  }
+}
+```
+
 ### Nuxt Integration
 
 This package provides custom rules that can be used with [Nuxt](https://nuxt.com). The recommended approach to use this config is via the Nuxt module.
