@@ -1,7 +1,6 @@
 import antfu from '@antfu/eslint-config'
 import antfuOptions from './rules/antfuConfig.mjs'
 import dsConfigBase from './rules/dsConfigBase.mjs'
-import dsConfigTailwind from './rules/dsConfigTailwind.mjs'
 import dsConfigVue from './rules/dsConfigVue.mjs'
 
 const damisparks = (options, ...configs) => {
@@ -18,6 +17,5 @@ const damisparks = (options, ...configs) => {
 }
 
 const vue = dsConfigVue
-const tailwind = dsConfigTailwind
 
-export { damisparks, tailwind, vue }
+export { damisparks, vue }
