@@ -21,7 +21,6 @@ My personal tweaks include:
   - Enforce a maximum number of attributes per line (`3` for single-line, `1` for multi-line).
   - Explicitly enforce **vue/prop-name-casing** to `camelCase`, even though it is the default.
 
-- Tailwind CSS (Optional): Enforce best practices and consistent usage of [Tailwind CSS](https://tailwindcss.com/) via `eslint-plugin-tailwindcss`.
 - ... and other minor tweaks.
 
 ## Installation
@@ -50,16 +49,15 @@ Using the default configuration without any arguments activates the `@antfu/esli
 
 ### Optional Presets
 
-Optionally, This config also provides some optional rules or presets for **Vue** and **TailwindCSS** presets:
+Optionally, This config also provides some optional rules or presets for **Vue**:
 
 ```js
 // eslint.config.mjs
-import { damisparks, tailwind, vue } from '@damisparks/eslint-config'
+import { damisparks, vue } from '@damisparks/eslint-config'
 
 export default damisparks(
   {}, // @antfu/eslint-config options must come first.
   vue,
-  tailwind,
   {
     // other ESLint Flat config rules object
   }
@@ -94,13 +92,12 @@ export default defineNuxtConfig({
 3. Integrate the `@damisparks/eslint-config` in your `eslint.config.mjs`:
 
 ```js
-import { damisparks, tailwind, vue } from '@damisparks/eslint-config'
+import { damisparks, vue } from '@damisparks/eslint-config'
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(damisparks(
   {}, // @antfu/eslint-config options must come first.
   vue, // Optional
-  tailwind, // Optional
 ))
 ```
 
