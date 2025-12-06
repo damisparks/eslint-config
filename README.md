@@ -57,7 +57,7 @@ This config also provides optional rules or presets for **Vue** and **Tailwind C
 
 ```js
 // eslint.config.mjs
-import { damisparks, vue, tailwind } from '@damisparks/eslint-config'
+import { damisparks, vue } from '@damisparks/eslint-config'
 
 export default damisparks(
   {}, // @antfu/eslint-config options must come first.
@@ -89,7 +89,7 @@ The `tailwind` preset uses `eslint-plugin-better-tailwindcss` to enforce:
 > The `tailwind` export is a function that returns a promise. Since ESLint flat config supports top-level await, use it like this:
 > ```js
 > // eslint.config.mjs
-> import { damisparks, vue, tailwind } from '@damisparks/eslint-config'
+> import { damisparks, tailwind, vue } from '@damisparks/eslint-config'
 >
 > export default damisparks(
 >   {}, // @antfu/eslint-config options must come first.

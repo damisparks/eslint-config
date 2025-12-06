@@ -27,4 +27,4 @@ const tailwind = async () => {
   return await getTailwindConfig()
 }
 
-export { damisparks, vue, tailwind }
+export { damisparks, tailwind, vue }
