@@ -62,10 +62,7 @@ import { damisparks, vue, tailwind } from '@damisparks/eslint-config'
 export default damisparks(
   {}, // @antfu/eslint-config options must come first.
   vue, // Optional Vue-specific rules
-  tailwind, // Optional Tailwind CSS rules
-  {
-    // other ESLint Flat config rules object
-  }
+  // other ESLint Flat config rules object
 )
 ```
 
@@ -87,6 +84,18 @@ The `tailwind` preset uses `eslint-plugin-better-tailwindcss` to enforce:
 > To use the Tailwind preset, you must install `eslint-plugin-better-tailwindcss` as a peer dependency:
 > ```bash
 > pnpm add -D eslint-plugin-better-tailwindcss
+> ```
+>
+> The `tailwind` export is a function that returns a promise. Since ESLint flat config supports top-level await, use it like this:
+> ```js
+> // eslint.config.mjs
+> import { damisparks, vue, tailwind } from '@damisparks/eslint-config'
+>
+> export default damisparks(
+>   {}, // @antfu/eslint-config options must come first.
+>   vue, // Optional Vue-specific rules
+>   ...(await tailwind()), // Optional Tailwind CSS rules (lazy-loaded)
+> )
 > ```
 
 ### Nuxt Integration
