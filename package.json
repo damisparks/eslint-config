@@ -15,7 +15,11 @@
   "bugs": "https://github.com/damisparks/eslint-config/issues",
   "keywords": [
     "eslint-config",
-    "eslintconfig"
+    "eslintconfig",
+    "vue",
+    "nuxt",
+    "tailwind",
+    "typescript"
   ],
   "main": "index.mjs",
   "scripts": {

@@ -5,7 +5,7 @@ const dsConfigVue = [
     rules: {
       'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
       'vue/max-attributes-per-line': ['error', {
-        singleline: { max: 3 },
+        singleline: { max: 5 },
         multiline: { max: 1 },
       }],
       'vue/prop-name-casing': ['error', 'camelCase'],
