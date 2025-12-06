@@ -16,9 +16,13 @@ Some features of this config are inherited from the `@antfu/eslint-config`:
 
 My personal tweaks include:
 
+- General:
+  - Force use of curly braces on control statements.
+  - Disable `antfu/top-level-function` to allow arrow syntax on top level functions.
+
 - Vue:
   - Enforce **vue/block-order** to `['script', 'template', 'style']`.
-  - Enforce a maximum number of attributes per line (`3` for single-line, `1` for multi-line).
+  - Enforce a maximum number of attributes per line (`5` for single-line, `1` for multi-line).
   - Explicitly enforce **vue/prop-name-casing** to `camelCase`, even though it is the default.
 
 - ... and other minor tweaks.
@@ -49,20 +53,41 @@ Using the default configuration without any arguments activates the `@antfu/esli
 
 ### Optional Presets
 
-Optionally, This config also provides some optional rules or presets for **Vue**:
+This config also provides optional rules or presets for **Vue** and **Tailwind CSS**:
 
 ```js
 // eslint.config.mjs
-import { damisparks, vue } from '@damisparks/eslint-config'
+import { damisparks, vue, tailwind } from '@damisparks/eslint-config'
 
 export default damisparks(
   {}, // @antfu/eslint-config options must come first.
-  vue,
+  vue, // Optional Vue-specific rules
+  tailwind, // Optional Tailwind CSS rules
   {
     // other ESLint Flat config rules object
   }
 )
 ```
+
+#### Vue Preset
+
+The `vue` preset includes:
+- Block order enforcement: `['script', 'template', 'style']`
+- Maximum attributes per line: `5` for single-line, `1` for multi-line
+- Prop name casing: `camelCase`
+
+#### Tailwind Preset
+
+The `tailwind` preset uses `eslint-plugin-better-tailwindcss` to enforce:
+- Consistent class ordering
+- Consistent line wrapping for long class strings
+- Consistent spacing
+
+> [!NOTE]
+> To use the Tailwind preset, you must install `eslint-plugin-better-tailwindcss` as a peer dependency:
+> ```bash
+> pnpm add -D eslint-plugin-better-tailwindcss
+> ```
 
 ### Nuxt Integration
 
@@ -95,10 +120,12 @@ export default defineNuxtConfig({
 import { damisparks, vue } from '@damisparks/eslint-config'
 import withNuxt from './.nuxt/eslint.config.mjs'
 
-export default withNuxt(damisparks(
-  {}, // @antfu/eslint-config options must come first.
-  vue, // Optional
-))
+export default withNuxt().prepend(
+  damisparks(
+    {}, // @antfu/eslint-config options must come first.
+    vue, // Optional
+  ),
+)
 ```
 
 ### NPM Scripts
@@ -116,14 +143,21 @@ Add the below lint commands to your `package.json` script section:
 
 ## VS Code Support
 
-In VS Code, to enable support for ESLint Flat configuration, edit your `.vscode/settings.json` file and add the following:
+If you use VS Code, you should manually enable support for ESLint flat config.
+
+1. Install the [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+
+2. Add the following settings to your `.vscode/settings.json`:
 
 ```json
 {
-  // Required in vscode-eslint < v3.0.10 only
-  "eslint.useFlatConfig": true
+  // Enable the ESLint flat config support
+  "eslint.experimental.useFlatConfig": true
 }
 ```
+
+> [!NOTE]
+> For VS Code ESLint extension versions `v3.0.10` and above, you can use `"eslint.useFlatConfig": true` instead of the experimental flag.
 
 ## License
 
