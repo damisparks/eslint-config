@@ -6,7 +6,6 @@ const dsConfigBase = [
       'curly': ['error', 'all'], // Including if blocks with a single statement
       'node/prefer-global/process': 'off',
       'no-console': ['warn', { allow: ['warn', 'error', 'debug'] }],
-      'pnpm/json-enforce-catalog': 'off', // Disable pnpm catalog enforcement for library packages
       'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       'style/function-call-spacing': ['error', 'never'],
       'style/no-tabs': ['error', { allowIndentationTabs: true }],
