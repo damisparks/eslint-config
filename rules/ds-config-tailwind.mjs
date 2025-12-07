@@ -5,7 +5,7 @@ export default async function getTailwindConfig () {
   try {
     betterTailwindcss = (await import('eslint-plugin-better-tailwindcss')).default
   } catch (error) {
-    if (error.code === 'ERR_MODULE_NOT_FOUND' || error.message.includes('eslint-plugin-better-tailwindcss')) {
+    if (error.code === 'ERR_MODULE_NOT_FOUND') {
       throw new Error(
         'The tailwind preset requires eslint-plugin-better-tailwindcss to be installed. '
         + 'Please install it: pnpm add -D eslint-plugin-better-tailwindcss',
