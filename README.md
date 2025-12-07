@@ -161,12 +161,12 @@ If you use VS Code, you should manually enable support for ESLint flat config.
 ```json
 {
   // Enable the ESLint flat config support
-  "eslint.experimental.useFlatConfig": true
+  "eslint.useFlatConfig": true
 }
 ```
 
 > [!NOTE]
-> For VS Code ESLint extension versions `v3.0.10` and above, you can use `"eslint.useFlatConfig": true` instead of the experimental flag.
+> For VS Code ESLint extension versions `v3.0.10` and above, use `"eslint.useFlatConfig": true` and use `"eslint.experimental.useFlatConfig": true` for older versions (before `v3.0.10`).
 
 ## License
 

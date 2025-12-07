@@ -24,7 +24,7 @@ const vue = dsConfigVue
 // Users need to await it when using: ...(await tailwind())
 const tailwind = async () => {
   const getTailwindConfig = (await import('./rules/ds-config-tailwind.mjs')).default
-  return await getTailwindConfig()
+  return getTailwindConfig()
 }
 
 export { damisparks, tailwind, vue }
