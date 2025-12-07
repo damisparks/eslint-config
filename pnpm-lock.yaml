@@ -15,9 +15,6 @@ importers:
       '@eslint/config-inspector':
         specifier: ^1.4.2
         version: 1.4.2(eslint@9.39.1(jiti@1.21.6))
-      baseline-browser-mapping:
-        specifier: ^2.9.4
-        version: 2.9.4
       eslint:
         specifier: ^9.39.1
         version: 9.39.1(jiti@1.21.6)
