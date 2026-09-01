@@ -2,7 +2,7 @@
   "name": "@damisparks/eslint-config",
   "type": "module",
   "version": "2.0.0",
-  "packageManager": "pnpm@10.28.1",
+  "packageManager": "pnpm@11.25.0",
   "description": "Dami Sparks ESLint Config",
   "author": {
     "name": "Dami Sparks",
